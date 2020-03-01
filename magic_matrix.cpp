@@ -1,3 +1,4 @@
+//Program to display magic matrix of odd order
 #include<iostream>
 using namespace std;
 
