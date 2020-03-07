@@ -1,17 +1,17 @@
 #include <iostream>
 using namespace std;
 
-//namespace nm2
-//{
-
 class Pascals
 {
-
+ int n;
 public:
-    Pascals(int n) {
+    Pascals(int n):n(0) {
 
     }
-    void pascalsmethod(int n)
+    void process(int n);
+};
+
+  void Pascals::process(int n)
     {
         int arr[20][20];
 
@@ -33,7 +33,7 @@ public:
             cout << "\n";
         }
     }
-};
+
 
 int main()
 {
@@ -43,7 +43,7 @@ int main()
     cin >> n;
     Pascals p(n);
 
-    p.pascalsmethod(n);
+    p.process(n);
 
     return 0;
 }
