@@ -1,17 +1,16 @@
 #include<iostream>
 #include<string>
 using namespace std;
-namespace ll
+
+struct Student
 {
-	struct Student
-	{
 		int id;
 		string name;
 		Student* next;
-	};
+};
 
-	class LinkedList
-	{
+class LinkedList
+{
 		Student* head;
 		Student* tail;
 		Student* CreateNode(int id, string name)
@@ -69,7 +68,7 @@ namespace ll
 
 		}
 		void DeleteLast()
-		{//make it better
+		{
 			Student* temp = head, * trav = head;
 			if (head == NULL)
 			{
@@ -111,7 +110,7 @@ namespace ll
 			}
 			else if ((pos > 1) && (pos < count))
 			{
-				for (int i = 1; i < pos; i++)//Not working else
+				for (int i = 1; i < pos; i++)
 				{
 					temp = trav;
 					trav = trav->next;
@@ -134,7 +133,7 @@ namespace ll
 				temp = trav;
 				trav = trav->next;
 			}
-			if (head->id == id)//make it better
+			if (head->id == id)
 			{
 				DeleteFirst();
 			}
@@ -252,12 +251,12 @@ namespace ll
 		~LinkedList()
 		{
 		}
-	};
+};
 
 
-	int main()
-	{
-		LinkedList lkd;
+int main()
+{
+	        LinkedList lkd;
 
 		char ch;
 		int val;
@@ -366,5 +365,4 @@ namespace ll
 
 		}
 		return 0;
-	}
 }
