@@ -306,7 +306,7 @@ int main()
 			{
 				cout << "Enter position to be deleted: ";
 				cin >> criteria;
-				lkd.DeleteByPosition(val);
+				lkd.DeleteByPosition(criteria);
 				break;
 			}
 			case 'V':
